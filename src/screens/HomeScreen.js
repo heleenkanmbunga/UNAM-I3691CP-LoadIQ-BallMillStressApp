@@ -19,10 +19,10 @@ export default function HomeScreen({ navigation }) {
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
       <Text style={styles.title}>⚙️ Load IQ</Text>
       <Text style={styles.subtitle}>Ball Mill Stress Analysis</Text>
-      <Text style={styles.welcome}>Welcome, {auth.currentUser?.email}</Text>
+      <Text style={styles.welcome}>👋 Welcome, {auth.currentUser?.email}</Text>
 
       <View style={styles.card}>
-        <Text style={styles.cardTitle}>What is this app?</Text>
+        <Text style={styles.cardTitle}>📋 What is this app?</Text>
         <Text style={styles.cardText}>
           Load IQ helps metallurgical engineers and technicians estimate
           compressive stress on ball mill support structures in real time.
@@ -32,7 +32,7 @@ export default function HomeScreen({ navigation }) {
       </View>
 
       <View style={styles.card}>
-        <Text style={styles.cardTitle}>Safety Classifications</Text>
+        <Text style={styles.cardTitle}>🛡️ Safety Classifications</Text>
         <View style={styles.row}>
           <View style={[styles.dot, { backgroundColor: '#4CAF50' }]} />
           <Text style={styles.cardText}>SAFE — stress below warning threshold</Text>
@@ -47,6 +47,15 @@ export default function HomeScreen({ navigation }) {
         </View>
       </View>
 
+      <View style={styles.card}>
+        <Text style={styles.cardTitle}>⚠️ Important Notice</Text>
+        <Text style={styles.cardText}>
+          This app is designed for static compressive load estimation only.
+          Dynamic, cyclic, and fatigue loads are out of scope. Always consult
+          a qualified engineer for structural safety decisions.
+        </Text>
+      </View>
+
       <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Main', { screen: 'Calculate' })}>
         <Text style={styles.buttonText}>Start Calculating →</Text>
       </TouchableOpacity>
@@ -54,6 +63,8 @@ export default function HomeScreen({ navigation }) {
       <TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>
         <Text style={styles.logoutText}>Log Out</Text>
       </TouchableOpacity>
+
+      <Text style={styles.footer}>Load IQ v1.0 | UNAM I3691CP | Semester 1, 2026</Text>
     </ScrollView>
   );
 }
@@ -74,6 +85,7 @@ const styles = StyleSheet.create({
   dot: { width: 12, height: 12, borderRadius: 6, marginRight: 10 },
   button: { backgroundColor: '#FF9800', borderRadius: 8, padding: 16, alignItems: 'center', marginBottom: 12 },
   buttonText: { color: '#000', fontWeight: 'bold', fontSize: 16 },
-  logoutButton: { borderWidth: 1, borderColor: '#F44336', borderRadius: 8, padding: 16, alignItems: 'center' },
+  logoutButton: { borderWidth: 1, borderColor: '#F44336', borderRadius: 8, padding: 16, alignItems: 'center', marginBottom: 16 },
   logoutText: { color: '#F44336', fontWeight: 'bold', fontSize: 16 },
+  footer: { color: '#333', textAlign: 'center', fontSize: 11, marginBottom: 8 },
 });
