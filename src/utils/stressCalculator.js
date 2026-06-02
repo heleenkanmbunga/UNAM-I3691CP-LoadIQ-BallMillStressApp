@@ -1,3 +1,7 @@
+// stressCalculator.js
+// Utility functions for ball mill compressive stress calculations
+// Engineering Model: F = m x g | sigma = F / A | Units: N, m2, MPa
+// Load IQ | UNAM I3691CP | Semester 1, 2026
 export const MATERIALS = {
     'Mild Steel (S235)': { yieldStrength: 235, warningThreshold: 200 },
     'Cast Iron (Grade 200)': { yieldStrength: 200, warningThreshold: 160 },
