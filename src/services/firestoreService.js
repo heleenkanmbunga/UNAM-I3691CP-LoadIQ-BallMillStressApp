@@ -1,3 +1,6 @@
+// firestoreService.js
+// Handles all Firestore read, write, and delete operations
+// Collections: calculations | Load IQ | UNAM I3691CP | Semester 1, 2026
 import { db } from './firebaseConfig';
 import {
   collection,
