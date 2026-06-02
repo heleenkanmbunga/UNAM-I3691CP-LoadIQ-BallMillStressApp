@@ -1,3 +1,7 @@
+// AppNavigator.js
+// Handles app navigation and Firebase Auth state listener
+// Stack: Auth (Login, Register) | App (Home, Calculate, History, Result)
+// Load IQ | UNAM I3691CP | Semester 1, 2026
 import React, { useState, useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
