@@ -1,3 +1,6 @@
+// authService.js
+// Handles Firebase Authentication: register, login, and logout
+// Load IQ | UNAM I3691CP | Semester 1, 2026
 import { auth } from './firebaseConfig';
 import {
   createUserWithEmailAndPassword,
