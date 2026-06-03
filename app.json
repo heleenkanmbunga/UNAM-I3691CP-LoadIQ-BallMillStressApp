@@ -28,6 +28,17 @@
     "plugins": [
       "expo-asset"
     ],
-    "owner": "heleenkanambunga"
+    "owner": "heleenkanambunga",
+    "extra": {
+      "eas": {
+        "projectId": "2c8a82b3-c11f-4047-a71f-74b7f1d57137"
+      },
+      "firebaseApiKey": "AIzaSyCAa4Qd84soxRhibaIFY1xSLboMh5Aq9FM",
+      "firebaseAuthDomain": "loadiq-e9c0f.firebaseapp.com",
+      "firebaseProjectId": "loadiq-e9c0f",
+      "firebaseStorageBucket": "loadiq-e9c0f.firebasestorage.app",
+      "firebaseMessagingSenderId": "542327089612",
+      "firebaseAppId": "1:542327089612:web:049a64bd382b455c7b5569"
+    }
   }
 }
