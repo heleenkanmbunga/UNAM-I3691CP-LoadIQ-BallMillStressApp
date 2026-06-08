@@ -8,6 +8,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { onAuthStateChanged } from 'firebase/auth';
+import { Ionicons } from '@expo/vector-icons';
 import { auth } from '../services/firebaseConfig';
 
 import LoginScreen from '../screens/LoginScreen';
@@ -26,7 +27,17 @@ const Tab = createBottomTabNavigator();
 function MainTabs() {
   return (
     <Tab.Navigator
-      screenOptions={{
+      screenOptions={({ route }) => ({
+        tabBarIcon: ({ focused, color, size }) => {
+          let iconName;
+          if (route.name === 'Home') iconName = focused ? 'home' : 'home-outline';
+          else if (route.name === 'Calculate') iconName = focused ? 'calculator' : 'calculator-outline';
+          else if (route.name === 'Compare') iconName = focused ? 'git-compare' : 'git-compare-outline';
+          else if (route.name === 'AI Predict') iconName = focused ? 'hardware-chip' : 'hardware-chip-outline';
+          else if (route.name === 'History') iconName = focused ? 'time' : 'time-outline';
+          else if (route.name === 'Profile') iconName = focused ? 'person' : 'person-outline';
+          return <Ionicons name={iconName} size={size} color={color} />;
+        },
         tabBarStyle: { backgroundColor: '#1E1E1E', borderTopColor: '#333' },
         tabBarActiveTintColor: '#FF9800',
         tabBarInactiveTintColor: '#666',
@@ -34,7 +45,7 @@ function MainTabs() {
         headerTintColor: '#FF9800',
         headerTitleStyle: { fontWeight: 'bold' },
         tabBarLabelStyle: { fontSize: 10 },
-      }}
+      })}
     >
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Calculate" component={CalculateScreen} />
