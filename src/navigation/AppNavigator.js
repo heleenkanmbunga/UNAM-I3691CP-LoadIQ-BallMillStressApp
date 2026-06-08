@@ -1,6 +1,6 @@
 // AppNavigator.js
 // Handles app navigation and Firebase Auth state listener
-// Stack: Auth (Login, Register) | App (Home, Calculate, History, Predict, Result)
+// Stack: Auth (Login, Register) | App (Home, Calculate, History, AI Predict, Profile, Result)
 // Load IQ | UNAM I3691CP | Semester 1, 2026
 
 import React, { useState, useEffect } from 'react';
@@ -17,6 +17,7 @@ import CalculateScreen from '../screens/CalculateScreen';
 import ResultScreen from '../screens/ResultScreen';
 import HistoryScreen from '../screens/HistoryScreen';
 import PredictScreen from '../screens/PredictScreen';
+import ProfileScreen from '../screens/ProfileScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -37,6 +38,7 @@ function MainTabs() {
       <Tab.Screen name="Calculate" component={CalculateScreen} />
       <Tab.Screen name="AI Predict" component={PredictScreen} />
       <Tab.Screen name="History" component={HistoryScreen} />
+      <Tab.Screen name="Profile" component={ProfileScreen} />
     </Tab.Navigator>
   );
 }
