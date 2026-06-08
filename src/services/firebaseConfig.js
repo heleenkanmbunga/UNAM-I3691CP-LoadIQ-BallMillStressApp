@@ -1,24 +1,14 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
-import Constants from 'expo-constants';
-
-const {
-  firebaseApiKey,
-  firebaseAuthDomain,
-  firebaseProjectId,
-  firebaseStorageBucket,
-  firebaseMessagingSenderId,
-  firebaseAppId,
-} = Constants.expoConfig.extra;
 
 const firebaseConfig = {
-  apiKey: firebaseApiKey,
-  authDomain: firebaseAuthDomain,
-  projectId: firebaseProjectId,
-  storageBucket: firebaseStorageBucket,
-  messagingSenderId: firebaseMessagingSenderId,
-  appId: firebaseAppId,
+  apiKey: "AIzaSyCAa4Qd84soxRhibaIFY1xSLboMh5Aq9FM",
+  authDomain: "loadiq-e9c0f.firebaseapp.com",
+  projectId: "loadiq-e9c0f",
+  storageBucket: "loadiq-e9c0f.firebasestorage.app",
+  messagingSenderId: "542327089612",
+  appId: "1:542327089612:web:049a64bd382b455c7b5569"
 };
 
 const app = initializeApp(firebaseConfig);
