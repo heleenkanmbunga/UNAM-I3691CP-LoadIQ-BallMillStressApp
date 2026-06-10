@@ -17,7 +17,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#FF9800"
       },
       "package": "com.loadiq.ballmill"
@@ -41,4 +41,4 @@
       "firebaseAppId": "1:542327089612:web:049a64bd382b455c7b5569"
     }
   }
-} 
+}
